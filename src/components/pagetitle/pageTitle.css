@@ -1,0 +1,95 @@
+/* ===== HERO BANNER ===== */
+.hero-banner {
+  position: relative;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* zoom animation */
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  animation: zoomBg 18s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+@keyframes zoomBg {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+/* gradient overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.65), rgba(0,0,0,0.25));
+  z-index: 1;
+}
+
+/* content wrapper */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+/* animated title */
+.hero-title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  animation: fadeSlide 1s ease forwards;
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* glowing underline */
+.hero-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(90deg,#b6bf4b,#e8f26d);
+  border-radius: 10px;
+  margin-top: 10px;
+  animation: growLine 1.2s ease forwards;
+}
+
+@keyframes growLine {
+  from { width: 0; }
+  to { width: 70px; }
+}
+
+/* breadcrumb glass box */
+.breadcrumb-box {
+  backdrop-filter: blur(8px);
+  background: rgba(255,255,255,0.15);
+  padding: 8px 16px;
+  border-radius: 30px;
+  display: inline-block;
+  animation: fadeSlide 1.2s ease forwards;
+}
+
+.breadcrumb-box a {
+  color: #e8f26d;
+  text-decoration: none;
+}
+
+.breadcrumb-box span {
+  color: #fff;
+}
+
+/* breadcrumb separator */
+.breadcrumb-box span::before {
+  content: "›";
+  margin: 0 8px;
+  color: #e8f26d;
+}

@@ -1,0 +1,208 @@
+/* ===== Animated gradient background ===== */
+.animated-bg {
+  background: linear-gradient(-45deg, #f6fff9, #ffffff, #ecfff5, #ffffff);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* ===== floating organic shapes ===== */
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(15,106,69,0.08);
+  animation: float 8s ease-in-out infinite;
+}
+
+.shape.one {
+  width: 140px;
+  height: 140px;
+  top: 60px;
+  right: 60px;
+}
+
+.shape.two {
+  width: 90px;
+  height: 90px;
+  bottom: 100px;
+  left: 30px;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-25px); }
+  100% { transform: translateY(0); }
+}
+
+
+/* floating leaf */
+.floating-leaf {
+  animation: leafFloat 4s ease-in-out infinite;
+}
+
+@keyframes leafFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+
+/* image zoom */
+.zoom-img {
+  transition: transform 0.6s ease;
+  border-radius: 16px;
+}
+
+.zoom-img:hover {
+  transform: scale(1.05);
+}
+
+
+/* glass card */
+.glass-card {
+  backdrop-filter: blur(14px);
+  background: rgba(255,255,255,0.75);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+}
+
+
+/* premium button */
+.theme-btn {
+  background: linear-gradient(135deg,#0f6a45,#1c8c5d);
+  color: #fff;
+  border: none;
+  padding: 14px;
+  width: 100%;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.theme-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+/* success message */
+.success-msg {
+  text-align: center;
+  color: #0f6a45;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+
+/* ===== glowing heading ===== */
+.glow-title {
+  position: relative;
+  display: inline-block;
+}
+
+.glow-title::after {
+  content: "";
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg,#0f6a45,#38c172);
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  border-radius: 10px;
+  animation: lineGrow 1.5s ease forwards;
+}
+
+@keyframes lineGrow {
+  from { width: 0; }
+  to { width: 60%; }
+}
+
+
+/* floating card hover */
+.glass-card {
+  backdrop-filter: blur(14px);
+  background: rgba(255,255,255,0.8);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  transition: 0.4s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+
+/* stagger fade */
+.fade-item {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.fade-item:nth-child(1){animation-delay:.1s;}
+.fade-item:nth-child(2){animation-delay:.2s;}
+.fade-item:nth-child(3){animation-delay:.3s;}
+.fade-item:nth-child(4){animation-delay:.4s;}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* glowing input focus */
+.MuiOutlinedInput-root.Mui-focused fieldset {
+  border-color: #0f6a45 !important;
+  box-shadow: 0 0 10px rgba(15,106,69,0.35);
+}
+
+
+/* premium button pulse */
+.theme-btn {
+  background: linear-gradient(135deg,#0f6a45,#1c8c5d);
+  color: white;
+  border: none;
+  padding: 14px;
+  width: 100%;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.theme-btn:active {
+  transform: scale(0.97);
+}
+
+
+/* success pop animation */
+.success-msg {
+  text-align: center;
+  color: #0f6a45;
+  font-weight: bold;
+  animation: popIn .4s ease;
+}
+
+@keyframes popIn {
+  from { transform: scale(.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

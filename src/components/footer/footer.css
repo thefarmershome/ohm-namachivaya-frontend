@@ -1,0 +1,133 @@
+/* main footer */
+.modern-footer {
+  background: linear-gradient(145deg,#198754,#0a0c0f);
+  color: #dcdcdc;
+  padding-top: 60px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* layout */
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 40px;
+  padding: 0 20px 40px;
+}
+
+/* headings */
+.footer-col h4,
+.footer-col h2 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+/* links */
+.footer-col a {
+  display: block;
+  color: #cfcfcf;
+  text-decoration: none;
+  margin-bottom: 8px;
+  position: relative;
+  width: fit-content;
+}
+
+.footer-col p{
+    color: #a6afc1 !important;
+}
+/* underline animation */
+.footer-col a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #8AC224;
+  left: 0;
+  bottom: -3px;
+  transition: 0.3s;
+}
+
+.footer-col a:hover::after {
+  width: 100%;
+}
+
+.footer-col a:hover {
+  color: #fff;
+}
+
+/* brand text */
+.brand p {
+  line-height: 1.6;
+  color: #a6afc1 !important;
+}
+
+/* social icons */
+.socials a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  background: #8AC224;
+  transform: scale(1.15);
+}
+
+/* newsletter */
+.footer-col input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.footer-col button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  background: #8AC224;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer-col button:hover {
+  background: #6f9f1c;
+}
+
+/* bottom */
+.footer-bottom {
+  text-align: center;
+  padding: 18px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  font-size: 14px;
+}
+
+/* smooth reveal */
+.footer-col {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.7s forwards;
+}
+
+.footer-col:nth-child(2){animation-delay:.2s}
+.footer-col:nth-child(3){animation-delay:.4s}
+.footer-col:nth-child(4){animation-delay:.6s}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

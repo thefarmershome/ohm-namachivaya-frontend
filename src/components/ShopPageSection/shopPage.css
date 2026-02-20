@@ -1,0 +1,178 @@
+/* CARD */
+.pro-card {
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  transition: 0.5s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transform-style: preserve-3d;
+  margin-bottom: 25px;
+}
+
+/* HOVER DEPTH EFFECT */
+.pro-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.18);
+}
+
+/* IMAGE WRAPPER */
+.pro-img-wrap {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+/* IMAGE */
+.pro-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease, filter 0.4s ease;
+}
+
+/* ZOOM + DARKEN */
+.pro-card:hover .pro-img {
+  transform: scale(1.12);
+  filter: brightness(0.75);
+}
+
+/* OVERLAY */
+.pro-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+/* SHOW OVERLAY */
+.pro-card:hover .pro-overlay {
+  opacity: 1;
+}
+
+/* BUTTON */
+.pro-btn {
+  background: #ffffff;
+  color: #111;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transform: translateY(20px);
+  transition: 0.4s ease;
+}
+
+/* BUTTON SLIDE UP */
+.pro-card:hover .pro-btn {
+  transform: translateY(0);
+}
+
+/* INFO */
+.pro-info {
+  padding: 18px;
+  text-align: center;
+}
+
+.pro-info h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+  transition: 0.3s;
+}
+
+.pro-card:hover .pro-info h3 {
+  letter-spacing: 0.5px;
+}
+
+/* overlay with blur */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: overlayFade 0.35s ease;
+}
+
+/* popup box */
+.popup-box {
+  background: #fff;
+  padding: 36px 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 380px;
+  text-align: center;
+  position: relative;
+
+  /* animation */
+  animation: popupEntrance 0.45s cubic-bezier(.17,.67,.38,1.35);
+  transform-origin: center;
+
+  box-shadow: 0 30px 70px rgba(0,0,0,0.25);
+}
+
+/* close icon */
+.popup-close {
+  position: absolute;
+  right: 16px;
+  top: 12px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* title */
+.popup-box h2 {
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* text */
+.popup-message {
+  color: #666;
+  margin-bottom: 18px;
+}
+
+/* phone button */
+.popup-phone {
+  display: inline-block;
+  background: #111;
+  color: #fff;
+  padding: 13px 26px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.popup-phone:hover {
+  background: #333;
+}
+
+/* overlay fade */
+@keyframes overlayFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* SUPER SMOOTH OPEN */
+@keyframes popupEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) translateY(60px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05) translateY(-8px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}

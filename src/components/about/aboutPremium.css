@@ -1,0 +1,135 @@
+/* ===== ABOUT SECTION ===== */
+.about-premium {
+  position: relative;
+  padding: 100px 0;
+  background: #f9fffb;
+  overflow: hidden;
+}
+
+/* floating decorative leaves */
+.floating-leaf {
+  position: absolute;
+  animation: floatLeaf 6s ease-in-out infinite;
+  opacity: 0.9;
+}
+
+@keyframes floatLeaf {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+/* image reveal animation */
+.about-img-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.about-img-wrap img {
+  width: 100%;
+  display: block;
+  transform: scale(1.08);
+  transition: 1s ease;
+}
+
+.about-img-wrap:hover img {
+  transform: scale(1);
+}
+
+/* animated mask reveal */
+.about-img-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  animation: revealMask 1.2s ease forwards;
+}
+
+@keyframes revealMask {
+  from { left: 0; }
+  to { left: 100%; }
+}
+
+/* badge */
+.about-badge {
+  display: inline-block;
+  background: rgba(182,191,75,0.15);
+  color: #0f6a45;
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* heading */
+.about-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #0f6a45;
+  margin-bottom: 20px;
+}
+
+/* text */
+.about-text p {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+/* signature */
+.about-signature {
+  font-weight: bold;
+  color: #0f6a45;
+}
+
+.about-sub-signature {
+  color: #b6bf4b;
+}
+
+/* button premium */
+.theme-btn-s2 {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 34px;
+  border-radius: 40px;
+  background: linear-gradient(135deg,#0f6a45,#1c8c5d);
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.theme-btn-s2:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* fade up animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.fade-up:nth-child(2){animation-delay:.2s;}
+.fade-up:nth-child(3){animation-delay:.4s;}
+.fade-up:nth-child(4){animation-delay:.6s;}
+.fade-up:nth-child(5){animation-delay:.8s;}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* organic background shape */
+.about-shape-bg {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  background: rgba(182,191,75,0.15);
+  border-radius: 50%;
+  top: 40px;
+  right: -80px;
+}

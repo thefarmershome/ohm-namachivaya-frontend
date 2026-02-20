@@ -1,0 +1,117 @@
+import * as types from "./type";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.min.css";
+import {
+  ADD_TO_WISHLIST,
+  REMOVE_FROM_WISHLIST,
+  REMOVE_FROM_COMPARE_LIST,
+  ADD_TO_COMPARE,
+  USER_LOGIN_SUCCESS,
+  USER_LOGOUT
+} from "./type";
+import CartController from "../../Controller/CartController";
+
+export const fetchProductsBegin = () => ({
+  type: types.FETCH_PRODUCTS_BEGIN,
+});
+
+export const receiveProducts = (products) => ({
+  type: types.RECEIVE_PRODUCTS,
+  products,
+});
+
+export const addToCart = (product, quantity, color, size) => (dispatch) => {
+  toast.success(`${product.title} Added to Cart`);
+  dispatch({
+    type: types.ADD_TO_CART,
+    product,
+    quantity,
+    color,
+    size,
+  });
+};
+
+export const removeFromCart = (product_id) => (dispatch) => {
+  toast.success("Item Removed from Cart");
+  dispatch({
+    type: types.REMOVE_FROM_CART,
+    product_id,
+  });
+};
+
+export const incrementQuantity = (cart_uid,currentQty) => async (dispatch) => {
+ try {
+  let dataNew = {
+    quantity: currentQty + 1
+  }
+    const res = await CartController.updateCartQuantity(cart_uid, dataNew);
+    const data = JSON.parse(res);
+
+    if (data.status === "SUCCESS") {
+      dispatch({
+        type: types.INCREMENT_QUANTITY,
+        payload: cart_uid,
+      });
+    }
+  } catch (err) {
+    console.error("Error decrementing quantity", err);
+  }
+};
+
+export const decrementQuantity = (cart_uid,currentQty) => async (dispatch) => {
+   try {
+    let dataNew = {
+      quantity: currentQty - 1
+    }
+    const res = await CartController.updateCartQuantity(cart_uid, dataNew);
+    const data = JSON.parse(res);
+
+    if (data.status === "SUCCESS") {
+      dispatch({
+        type: types.DECREMENT_QUANTITY,
+        payload: cart_uid,
+      });
+    }
+  } catch (err) {
+    console.error("Error decrementing quantity", err);
+  }
+};
+
+export const addToWishList = (product) => (dispatch) => {
+  dispatch({
+    type: ADD_TO_WISHLIST,
+    product,
+  });
+};
+
+export const removeFromWishList = (id) => (dispatch) => {
+  toast.error("Item removed from WishList");
+  dispatch({
+    type: REMOVE_FROM_WISHLIST,
+    id,
+  });
+};
+
+export const addToCompareList = (product) => (dispatch) => {
+  dispatch({
+    type: ADD_TO_COMPARE,
+    product,
+  });
+};
+export const removeFromCompareList = (product) => (dispatch) => {
+  dispatch({
+    type: REMOVE_FROM_COMPARE_LIST,
+    product,
+  });
+};
+
+export const loginUserAction = (userData) => (dispatch) =>{
+  dispatch({
+    type: USER_LOGIN_SUCCESS,
+    payload: userData
+  })
+}
+
+export const logoutUserAction = () => (dispatch) => {
+  dispatch({ type: USER_LOGOUT });
+};

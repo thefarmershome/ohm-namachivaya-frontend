@@ -1,0 +1,86 @@
+import React from 'react';
+import { BrowserRouter, Routes, Route, } from "react-router-dom";
+import Homepage from '../HomePage/HomePage'
+
+import AboutPage from '../AboutPage/AboutPage';
+import ServicePages from '../ServicePage/ServicePage';
+import ServiceSinglePage from '../ServiceSinglePage/ServiceSinglePage';
+import TeamPage from '../TeamPage/TeamPage';
+import TeamSinglePage from '../TestimonialPage/TestimonialPage';
+import ShopPage from '../ShopPage'
+import ProductSinglePage from '../ProductSinglePage';
+import CartPage from '../CartPage';
+import CheckoutPage from '../CheckoutPage';
+import OrderRecived from '../OrderRecived';
+import BlogPage from '../BlogPage/BlogPage'
+import BlogPageLeft from '../BlogPageLeft/BlogPageLeft' 
+import BlogPageFullwidth from '../BlogPageFullwidth/BlogPageFullwidth'
+import BlogDetails from '../BlogDetails/BlogDetails'
+import BlogDetailsLeftSiide from '../BlogDetailsLeftSiide/BlogDetailsLeftSiide'
+import BlogDetailsFull from '../BlogDetailsFull/BlogDetailsFull'
+import ContactPage from '../ContactPage/ContactPage';
+import LoginPage from '../LoginPage/index';
+import ForgotPassword from '../ForgotPassword/index';
+import Register from '../SignUpPage/index';
+import ErrorPage from '../ErrorPage/ErrorPage';
+import ProfilePage from '../../components/Profile/ProfilePage';
+import WhishListPage from '../WhishList';
+import MyOrders from '../OrderRecived/orderPage';
+import MyOrdersLisiting from '../OrderRecived/orderPage';
+import OrdersPageMain from '../OrderRecived/ordersMain';
+import SingleOrderView from '../OrderRecived/ordersView';
+import CheckoutButton from '../../components/CheckoutSection/checkout';
+import BecomeFarmer from '../BecomeFarmer/becomeFarmer';
+import AboutUsPage from '../../components/about/aboutUsNew';
+import AboutUsPageNew from '../../components/about/aboutUsNew';
+
+
+const AllRoute = () => {
+
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+        <Route path="/login" element={<LoginPage />} />
+          <Route path="/" element={<Homepage />} />
+          <Route path="home" element={<Homepage />} />
+         
+          <Route path="about" element={<AboutPage />} />
+          <Route path="services" element={<ServicePages/>} />
+          <Route path="service-single/:slug" element={<ServiceSinglePage />} />
+          <Route path="team" element={<TeamPage />} />
+          <Route path="testimonial" element={<TeamSinglePage />} />
+          <Route path="shop" element={<ShopPage />} />
+          <Route path='shop-single/:slug' element={<ProductSinglePage />} />
+          <Route path='cart' element={<CartPage />} />
+          <Route path='checkout' element={<CheckoutPage />} />
+          {/* <Route path='checkout' element={<CheckoutButton />} /> */}
+          <Route path='order_received' element={<OrderRecived />} />
+          <Route path='orders_listing' element={<OrdersPageMain />} />
+          <Route path='orders_view' element={<SingleOrderView />} />
+          <Route path='blog' element={<BlogPage/>} />
+          <Route path='blog-left-sidebar' element={<BlogPageLeft />} />
+          <Route path='blog-fullwidth' element={<BlogPageFullwidth />} />
+          <Route path='blog-single/:slug' element={<BlogDetails />} />
+          <Route path='blog-single-left-sidebar/:slug' element={<BlogDetailsLeftSiide />} />
+          <Route path='blog-single-fullwidth/:slug' element={<BlogDetailsFull />} />
+          <Route path='contact' element={<ContactPage />} />         
+          <Route path="forgot" element={<ForgotPassword />} />
+          <Route path="register" element={<Register />} />
+          <Route path='404' element={<ErrorPage />} />  
+          <Route path='profilePage' element={<ProfilePage />} />  
+
+          <Route path='whishlist' element={<WhishListPage />} /> 
+           <Route path="/aboutUS" element={<AboutUsPageNew/>} /> 
+
+          <Route path="/become-farmer" element={<BecomeFarmer/>} /> 
+
+       
+        </Routes>
+      </BrowserRouter>
+
+    </div>
+  );
+}
+
+export default AllRoute;

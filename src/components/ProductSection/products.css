@@ -1,0 +1,89 @@
+/* ===== STICKY FILTER ===== */
+.sticky-filter {
+  position: sticky;
+  top: 70px;
+  z-index: 100;
+  background: #fff;
+  padding-top: 10px;
+}
+
+/* ===== FILTER BUTTONS ===== */
+.product-filter-btn {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.product-btn {
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  background: #f4f7f5;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.product-btn:hover {
+  transform: translateY(-2px);
+  background: #e9f5ef;
+}
+
+.product-btn.current {
+  background: linear-gradient(135deg,#0f6a45,#1c8c5d);
+  color: white;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* ===== PROGRESS BAR ===== */
+.filter-progress {
+  height: 3px;
+  width: 0;
+  background: linear-gradient(90deg,#0f6a45,#b6bf4b);
+  transition: width .4s ease;
+  margin-top: 8px;
+}
+
+/* ===== GRID ANIMATION ===== */
+.product-grid {
+  transition: all .35s ease;
+}
+
+.product-grid.fade {
+  opacity: 0;
+  transform: scale(.96);
+}
+
+.product-grid.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ===== SKELETON LOADER ===== */
+.skeleton-card {
+  height: 260px;
+  border-radius: 18px;
+  background: linear-gradient(90deg,#eee,#f6f6f6,#eee);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite;
+}
+
+@keyframes shimmer {
+  0%{background-position:200% 0}
+  100%{background-position:-200% 0}
+}
+
+/* ===== EMPTY STATE ===== */
+.empty-state {
+  text-align: center;
+  padding: 60px 0;
+  color: #666;
+}
+
+.empty-state h3 {
+  color: #0f6a45;
+}

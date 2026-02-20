@@ -1,0 +1,63 @@
+import React, { Fragment, useEffect, useState } from 'react';
+import HeaderTop from '../../components/HeaderTop/HeaderTop';
+import Navbar from '../../components/Navbar/Navbar'
+import NavbarS2 from '../../components/NavbarS2/NavbarS2';
+import HeroSlider from '../../components/HeroSlider/HeroSlider';
+import OricoFeatures from '../../components/OricoFeatures/OricoFeatures';
+import About from '../../components/about/about';
+
+import ServiceSection from '../../components/ServiceSection/ServiceSection';
+import OfferSection from '../../components/OfferSection/OfferSection';
+import ProductSection from '../../components/ProductSection/ProductSection';
+import TeamSection from '../../components/TeamSection/TeamSection';
+import PartnersSection from '../../components/PartnersSection/PartnersSection';
+import Testimonial from '../../components/Testimonial/Testimonial';
+import BlogSection from '../../components/BlogSection/BlogSection';
+import Footer from '../../components/footer/Footer';
+import Scrollbar from '../../components/scrollbar/scrollbar';
+import Logo from '../../images/logo.svg'
+import LogoOhm from "../../images/Logo/Ohm_namachiva.png"
+import SignUpModal from '../SignUpPage';
+import ProcessSteps from '../../components/about/aboutContent';
+import ThirukuralSlide from './thirukuralSlide';
+import DifferentSection from './diffrantSection';
+
+const HomePage = () => {
+    const [showModal, setShowModal] = useState(false);
+
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setShowModal(true);
+  //   }, 3000); 
+
+  //   return () => clearTimeout(timer); 
+  // }, []);
+
+    return (
+        <Fragment>
+            {/* <HeaderTop /> */}
+            <NavbarS2 hclass={'wpo-header-style-2'} Logo={LogoOhm} />
+            <div className="orico-hero-wrap">
+                <HeroSlider />
+                {/* <OricoFeatures /> */}
+            </div>
+            <About hclass={'orico-about-section section-padding'} />
+            <ProcessSteps/>
+           
+            {/* <ServiceSection hclass={"service_section section-padding"} /> */}
+            {/* <OfferSection /> */}
+            <ProductSection />
+            <ThirukuralSlide/> 
+            <DifferentSection/>           
+            <PartnersSection />
+            <TeamSection />
+            {/* <Testimonial /> */}
+            {/* <BlogSection /> */}
+            <Footer hclass={'footer-section'} />
+            <Scrollbar />
+            <SignUpModal open={showModal} onClose={() => setShowModal(false)} />
+            
+        </Fragment>
+    )
+};
+export default HomePage;
