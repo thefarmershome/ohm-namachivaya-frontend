@@ -1,6 +1,6 @@
 
 
-const instance = "LOCAL";
+const instance = "DEV";
 let BASE_URL;
 
 if(instance == "LOCAL") {
