@@ -20,7 +20,7 @@ const ShopProduct = ({ products, addToCartProduct }) => {
                                             <img src={product.proImg} alt="" />
                                         </div>
                                         <div className="details">
-                                            <h3><Link onClick={ClickHandler} to={`/shop-single/${product.slug}`}>{product.title}</Link></h3>
+                                            <h3><Link onClick={ClickHandler} to={`/our-products-single/${product.slug}`}>{product.title}</Link></h3>
                                             <del>₹{product.delPrice}</del>
                                             <span>₹{product.price}</span>
                                             <div className="theme-btn-s3">

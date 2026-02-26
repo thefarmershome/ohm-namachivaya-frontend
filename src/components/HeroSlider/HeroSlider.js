@@ -64,7 +64,7 @@ const HeroSlider = () => {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
     >
-      🌿 Healthy Days
+      Nourishing the Earth, Naturally
     </motion.div>
 
     <motion.h1
@@ -73,7 +73,7 @@ const HeroSlider = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2 }}
     >
-      Pure & Sustainable <br /> Agriculture
+      Premium Organic <br /> Fertilisers
     </motion.h1>
 
     <motion.p
@@ -82,7 +82,7 @@ const HeroSlider = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.4 }}
     >
-      Use code <span style={{color:"#FF4D4D",fontWeight:"bold"}}>25% OFF</span> in stores & online
+      100% Organic & Chemical-Free Solutions — Trusted by Farmers Worldwide
     </motion.p>
 
     <motion.div
@@ -90,7 +90,7 @@ const HeroSlider = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.6 }}
     >
-      <Link to="/shop" className="hero-btn">
+      <Link to="/our-products" className="hero-btn">
         Explore Our Products
       </Link>
     </motion.div>

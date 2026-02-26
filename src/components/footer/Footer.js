@@ -33,9 +33,9 @@ const Footer = (props) => {
   <div className="footer-container">
 
     <div className="footer-col brand">
-      <h2>Ohm Namachivaya</h2>
+      <h2>Om Namahsivaya Internationals</h2>
       <p>
-        Natural agriculture solutions for sustainable and eco-friendly farming.
+        Premium organic fertilisers manufacturer and global exporter from Coimbatore, India.
       </p>
 
       <div className="socials">
@@ -76,7 +76,7 @@ const Footer = (props) => {
   </div>
 
   <div className="footer-bottom">
-    © {new Date().getFullYear()} Namachivaya
+    © {new Date().getFullYear()} Om Namahsivaya Internationals
   </div>
 </footer>
   );

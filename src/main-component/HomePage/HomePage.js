@@ -21,6 +21,9 @@ import SignUpModal from '../SignUpPage';
 import ProcessSteps from '../../components/about/aboutContent';
 import ThirukuralSlide from './thirukuralSlide';
 import DifferentSection from './diffrantSection';
+import FertiliserShowcase from '../../components/FertiliserShowcase/FertiliserShowcase';
+import WhyChooseUs from '../../components/WhyChooseUs/WhyChooseUs';
+import CTABanner from '../../components/CTABanner/CTABanner';
 
 const HomePage = () => {
     const [showModal, setShowModal] = useState(false);
@@ -44,11 +47,14 @@ const HomePage = () => {
             <About hclass={'orico-about-section section-padding'} />
             <ProcessSteps/>
            
+            <FertiliserShowcase />
             {/* <ServiceSection hclass={"service_section section-padding"} /> */}
             {/* <OfferSection /> */}
             <ProductSection />
-            <ThirukuralSlide/> 
-            <DifferentSection/>           
+            <WhyChooseUs />
+            <CTABanner />
+            <ThirukuralSlide/>
+            {/* <DifferentSection/> */}
             <PartnersSection />
             <TeamSection />
             {/* <Testimonial /> */}

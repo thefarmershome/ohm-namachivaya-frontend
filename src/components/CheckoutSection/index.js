@@ -136,7 +136,7 @@ const CheckoutSection = ({ cartList }) => {
                 key: process.env.REACT_APP_RAZORPAY_KEY_ID,
                 amount: parsRes.data.data.amount,
                 currency: parsRes.data.data.currency,
-                name: "The Farmer's Home",
+                name: "Om Namahsivaya Internationals",
                 description: "Test Transaction",
                 order_id: parsRes.data.dataid, // <- REQUIRED!
                 handler: async (res) => {                    
