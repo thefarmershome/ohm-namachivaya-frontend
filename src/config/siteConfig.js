@@ -5,6 +5,7 @@ const siteConfig = {
   logoChange: true,
   sliderBgImageChange:true,
   leftSideImageChange:true,
+  loginProfileHeader:false,
   
 }
 

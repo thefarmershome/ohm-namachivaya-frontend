@@ -121,7 +121,7 @@ const HeaderS2 = (props) => {
                 </div>
               </div>
               <div className="col-lg-4 col-md-2 col-2">
-                <div className="header-right">
+              {siteConfig?.loginProfileHeader &&  <div className="header-right">
                   {!isLoggedIn ? (
                                       <img
                                         src={ProfileImage}
@@ -151,7 +151,7 @@ const HeaderS2 = (props) => {
                                       </p>
                                     </div>
                   
-                 {/* {siteConfig.isCartEnabled && <div className="mini-cart">
+                 {siteConfig.isCartEnabled && <div className="mini-cart">
                      <button
                       className="cart-toggle-btn"
                       onClick={() => setcartState(!cartActive)}
@@ -217,9 +217,9 @@ const HeaderS2 = (props) => {
                         </div>
                       </div>
                     </div>
-                  </div> } */}
+                  </div> }
                  
-                </div>
+                </div>}
               </div>
             </div>
           </div>
