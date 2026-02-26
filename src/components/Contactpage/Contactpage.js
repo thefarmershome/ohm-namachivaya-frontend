@@ -80,8 +80,8 @@ const Contactpage = () => {
   </Typography>
 
   <Typography className="fade-item" color="text.secondary" mt={2} mb={4}>
-    The Farmer's Home connects farmers and customers.
-    Sell your natural food products directly from your land.
+    Om Namahsivaya Internationals connects organic farmers with global markets.
+    Premium organic fertilisers, scientifically tested and export-ready.
     Contact us by leaving a message below.
   </Typography>
 

@@ -1,6 +1,6 @@
 
 const siteConfig = {
-  siteName: "Ohm Namachivaya",
+  siteName: "Om Namahsivaya Internationals",
   isCartEnabled: false,
   logoChange: true,
   sliderBgImageChange:true,

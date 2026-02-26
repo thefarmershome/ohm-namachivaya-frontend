@@ -46,19 +46,19 @@ const PrevArrow = ({ onClick }) => (
 export default function ThirukuralSlide() {
   const quotes = [
     {
-      text: "Healthy soil is the foundation of sustainable agriculture and a thriving planet.",
-      author: "Agricultural Philosophy",
-      role: "Sustainability",
+      text: "Nourishing the earth naturally is not just our tagline — it is the philosophy behind every product we create at Om Namahsivaya Internationals.",
+      author: "Om Namahsivaya Internationals",
+      role: "Our Philosophy",
     },
     {
-      text: "Nature provides everything plants need, when farming works in harmony with the soil.",
-      author: "Natural Farming Principle",
-      role: "Organic Agriculture",
+      text: "From the sacred Indian Desi cow to the beneficial mycorrhiza in our soil, nature holds the key to sustainable and abundant agriculture.",
+      author: "Om Namahsivaya Internationals",
+      role: "Our Belief",
     },
     {
-      text: "Supporting soil life today ensures food security for future generations.",
-      author: "Sustainable Growth",
-      role: "Global Agriculture",
+      text: "We believe that organic farming is the future. Our mission is to empower every farmer with chemical-free, scientifically proven solutions for a greener tomorrow.",
+      author: "Om Namahsivaya Internationals",
+      role: "Our Mission",
     },
   ];
 

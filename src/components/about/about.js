@@ -44,31 +44,37 @@ const about = (props) => {
         <div className="about-text">
 
           <div className="about-badge fade-up">
-            ABOUT NAMACHIVAYA
+            ABOUT OM NAMAHSIVAYA INTERNATIONALS
           </div>
 
           <h2 className="about-title fade-up">
-            Natural Solutions for <br/> Sustainable Agriculture
+            Nourishing the Earth, <br/> Naturally
           </h2>
 
           <p className="fade-up">
-            Namachivaya promotes sustainable and eco-friendly farming practices
-            through natural agricultural inputs that improve soil health and plant growth.
+            Om Namahsivaya Internationals is a Coimbatore-based manufacturer
+            and global exporter of premium organic fertilisers. We are committed
+            to delivering chemical-free agricultural solutions backed by science
+            and rooted in Indian farming tradition.
           </p>
 
           <p className="fade-up">
-            Our products include organic fertilizers, cocopeat, cow dung manure,
-            VAM and mycorrhiza to enhance crop productivity naturally.
+            Our flagship range — Cow Dung Fertiliser, VAM Mycorrhiza, Enriched
+            Cow Dung Powder with VAM, Natural Pest Control, Organic Growth
+            Booster, and Coco Blocks — is designed to restore soil vitality,
+            enhance crop yield, and support sustainable agriculture worldwide.
           </p>
 
           <p className="fade-up">
-            We believe healthy soil is the foundation of sustainable agriculture.
-            Our mission is to support farmers worldwide with reliable natural solutions.
+            Every product is lab-tested for quality, packaged in eco-friendly
+            materials, and export-ready for international markets. From soil
+            enrichment to pest management, we provide end-to-end organic
+            solutions that farmers trust.
           </p>
 
-          <p className="about-signature fade-up">Namachivaya</p>
+          <p className="about-signature fade-up">Om Namahsivaya Internationals</p>
           <p className="about-sub-signature fade-up">
-            Natural Agriculture Solutions
+            Premium Organic Fertilisers & Global Export
           </p>
 
           <Link to="/contact" className="theme-btn-s2 fade-up">

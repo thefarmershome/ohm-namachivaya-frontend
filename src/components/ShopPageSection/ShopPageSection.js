@@ -385,7 +385,7 @@ const handleCheckboxChange = (brand) => {
                             <h2>
                               <Link
                                 onClick={ClickHandler}
-                                to={`/shop-single/${product.slug}`}
+                                to={`/our-products-single/${product.slug}`}
                               >
                                 {product.name}
                               </Link>

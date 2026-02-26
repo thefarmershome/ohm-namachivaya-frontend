@@ -228,7 +228,7 @@ const CartPage = (props) => {
                         <Link
                           onClick={ClickHandler}
                           className="theme-btn"
-                          to="/shop"
+                          to="/our-products"
                         >
                           Continue Shopping{" "}
                         </Link>

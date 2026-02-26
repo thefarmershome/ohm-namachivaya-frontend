@@ -17,7 +17,7 @@ const OfferSection = (props) => {
                             <h2>“<span>80% OFF</span>”</h2>
                             <h3>- GET 100% OGRANIC FOOD -</h3>
                             <div className="btns">
-                                <Link onClick={ClickHandler} to="/shop" className="theme-btn-s2">Shop Now <i className="ti-arrow-right"
+                                <Link onClick={ClickHandler} to="/our-products" className="theme-btn-s2">Our Products <i className="ti-arrow-right"
                                     aria-hidden="true"></i></Link>
                             </div>
                         </div>

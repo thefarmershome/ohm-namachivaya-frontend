@@ -100,12 +100,12 @@ const HeaderS2 = (props) => {
                     
                     <li className="menu-item-has-children">
                       <Link onClick={ClickHandler} to="#">
-                        Shop
+                        Our Products
                       </Link>
                       <ul className="sub-menu">
                         <li>
-                          <Link onClick={ClickHandler} to="/shop">
-                            Shop
+                          <Link onClick={ClickHandler} to="/our-products">
+                            Our Products
                           </Link>
                         </li>
                        

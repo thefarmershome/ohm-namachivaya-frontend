@@ -8,21 +8,21 @@ const ProcessSteps = () => {
   const steps = [
     {
       icon: <AgricultureIcon sx={{ fontSize: 70, color: "#b6bf4b" }} />,
-      title: "Natural Source Selection",
+      title: "Sourced from Indian Desi Cows",
       description:
-        "Raw materials are sourced responsibly from natural agricultural origins and trusted farming environments.",
+        "Our organic inputs begin with premium raw materials sourced from trusted Indian Desi cow farms and natural agricultural origins.",
     },
     {
       icon: <ScienceIcon sx={{ fontSize: 70, color: "#0f6a45" }} />,
-      title: "Processing & Enrichment",
+      title: "Lab-Tested & Scientifically Enriched",
       description:
-        "Products are carefully processed, enriched with beneficial microorganisms, and prepared to support soil health.",
+        "Every product is scientifically processed, enriched with beneficial microorganisms like VAM, and rigorously lab-tested for quality.",
     },
     {
       icon: <PublicIcon sx={{ fontSize: 70, color: "#b6bf4b" }} />,
-      title: "Global Agricultural Support",
+      title: "Export-Ready Worldwide Delivery",
       description:
-        "Our natural solutions are made available to growers and agricultural partners to support sustainable farming worldwide.",
+        "Packed in eco-friendly, export-ready packaging and delivered to organic farmers and agricultural partners across the globe.",
     },
   ];
 

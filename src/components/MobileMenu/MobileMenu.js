@@ -75,18 +75,18 @@ const menus = [
   
     {
         id: 44,
-        title: 'Shop',
+        title: 'Our Products',
         link: '#',
         submenu: [
             {
                 id: 41,
-                title: 'Shop',
-                link: '/shop',
+                title: 'Our Products',
+                link: '/our-products',
             },
             {
                 id: 42,
                 title: 'Shop Single',
-                link: '/shop-single/Fresh-key-Lime'
+                link: '/our-products-single/Fresh-key-Lime'
             },
             {
                 id: 43,

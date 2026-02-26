@@ -52,7 +52,7 @@ class RazorpayService {
         key: process.env.REACT_APP_RAZORPAY_KEY_ID,
         amount: orderData.amount,
         currency: orderData.currency,
-        name: "The Farmer's Home",
+        name: "Om Namahsivaya Internationals",
         description: paymentData.description || "Payment for your order",
         order_id: orderData.id,
         prefill: {

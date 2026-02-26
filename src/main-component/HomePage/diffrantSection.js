@@ -18,7 +18,7 @@ const DifferentSection = () => {
           variant="overline"
           sx={{ color: "#b6bf4b", fontWeight: "bold" }}
         >
-          Why Choose Namachivaya
+          Why Choose Om Namahsivaya Internationals
         </Typography>
 
         <Typography
@@ -29,7 +29,7 @@ const DifferentSection = () => {
         </Typography>
 
         <Typography variant="body1" sx={{ mb: 3, color: "text.secondary" }}>
-          Namachivaya focuses on natural agricultural inputs that strengthen soil
+          Om Namahsivaya Internationals focuses on natural agricultural inputs that strengthen soil
           health, improve crop performance, and support sustainable farming
           practices worldwide.
         </Typography>

@@ -20,7 +20,7 @@ const ShopPage = () => {
         <Fragment>
             {/* <HeaderTop /> */}
             <NavbarS2 hclass={'wpo-header-style-2'} Logo={Logo} />
-            <PageTitle pageTitle={'Shop'} pagesub={'Shop'} backgroundImage={backgroundImageShop}/>
+            <PageTitle pageTitle={'Our Products'} pagesub={'Our Products'} backgroundImage={backgroundImageShop}/>
             <ShopPageSection/>
             <Footer FooterShape={false} />
             <Scrollbar />

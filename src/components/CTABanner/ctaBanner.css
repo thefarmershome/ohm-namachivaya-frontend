@@ -1,0 +1,127 @@
+/* ===== CTA BANNER SECTION ===== */
+.cta-banner {
+  background: linear-gradient(135deg, #0f6a45, #1c8c5d);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative shapes */
+.cta-banner::before {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  top: -70px;
+  right: -50px;
+}
+
+.cta-banner::after {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  bottom: -50px;
+  left: 70px;
+}
+
+.cta-banner .cta-shape-extra {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(182, 191, 75, 0.08);
+  top: 50%;
+  left: 20%;
+  transform: translateY(-50%);
+}
+
+/* ---- Overline ---- */
+.cta-banner .cta-overline {
+  color: #b6bf4b;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+/* ---- Heading ---- */
+.cta-banner .cta-heading {
+  color: white;
+  font-weight: 700;
+  font-family: 'Itim', cursive;
+  font-size: 38px;
+  margin-bottom: 14px;
+}
+
+/* ---- Subtext ---- */
+.cta-banner .cta-subtext {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  margin-bottom: 32px;
+}
+
+/* ---- Buttons ---- */
+.cta-btn-light {
+  display: inline-block;
+  padding: 16px 36px;
+  border-radius: 40px;
+  background: white;
+  color: #0f6a45;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-btn-light:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  color: #0f6a45;
+}
+
+.cta-btn-outline {
+  display: inline-block;
+  padding: 16px 36px;
+  border-radius: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.cta-btn-outline:hover {
+  background: white;
+  color: #0f6a45;
+  border-color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 960px) {
+  .cta-banner .cta-heading {
+    font-size: 30px;
+  }
+  .cta-banner .cta-subtext {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cta-banner .cta-heading {
+    font-size: 24px;
+  }
+  .cta-btn-light,
+  .cta-btn-outline {
+    padding: 14px 28px;
+    font-size: 14px;
+  }
+}

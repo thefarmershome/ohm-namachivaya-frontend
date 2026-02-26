@@ -109,12 +109,12 @@ function WhoWeAre() {
   const cards = [
     {
       title: "Who We Are",
-      text: "The Farmer's Home is a complete online food supply from the direct farmer to the happy customers.",
+      text: "Om Namahsivaya Internationals is a premium organic fertilisers manufacturer and global exporter, delivering chemical-free solutions to farmers worldwide.",
       img: whoWeAreImg
     },
     {
       title: "Our Products",
-      text: "All products in The Farmer's Home are cultivated and delivered from our nearby farmers.",
+      text: "All products at Om Namahsivaya Internationals are organic, lab-tested, and crafted to restore soil health and boost crop productivity.",
       img: OurProductsImg
     },
     {
