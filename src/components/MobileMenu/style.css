@@ -143,7 +143,7 @@
 }
 
 /* Extra small screens: smallest hamburger (320px - 440px) – whole green button */
-@media (min-width: 320px) and (max-width: 439.98px) {
+@media (max-width: 439.98px) {
     .showmenu,
     .mobile-menu-btn .showmenu {
         width: auto;
