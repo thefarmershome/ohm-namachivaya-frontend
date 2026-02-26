@@ -1,17 +1,14 @@
 import React, {Fragment} from 'react';
-import HeaderTop from '../../components/HeaderTop/HeaderTop';
-import Navbar from '../../components/Navbar/Navbar';
+import NavbarS2 from '../../components/NavbarS2/NavbarS2';
 import PageTitle from "../../components/pagetitle/PageTitle";
 import CheckoutSection from '../../components/CheckoutSection'
 import Scrollbar from '../../components/scrollbar/scrollbar'
 import {connect} from "react-redux";
 import Footer from '../../components/footer/Footer';
-import Logo from '../../images/logo.svg'
 const CheckoutPage =({cartList}) => {
     return(
         <Fragment>
-            <HeaderTop />
-            <Navbar hclass={'wpo-site-header'} Logo={Logo} />
+            <NavbarS2 hclass={'wpo-header-style-2'} />
             <PageTitle pageTitle={'Checkout'} pagesub={'Checkout'}/> 
             <CheckoutSection cartList={cartList}/>
             <Footer FooterShape={false} />

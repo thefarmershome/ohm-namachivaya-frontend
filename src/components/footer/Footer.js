@@ -35,7 +35,7 @@ const Footer = (props) => {
     <div className="footer-col brand">
       <h2>Om Namahsivaya Internationals</h2>
       <p>
-        Premium organic fertilisers manufacturer and global exporter from Coimbatore, India.
+        Premium organic fertilisers manufacturer and global exporter from Coimbatore, India. Rooted in Indian soil. Trusted by global farms.
       </p>
 
       <div className="socials">
@@ -47,8 +47,8 @@ const Footer = (props) => {
 
     <div className="footer-col">
       <h4>Quick Links</h4>
-      <a href="/about">About</a>
-      <a href="/products">Products</a>
+      <a href="/aboutUS">About</a>
+      <a href="/our-products">Products</a>
       <a href="/contact">Contact</a>
     </div>
 

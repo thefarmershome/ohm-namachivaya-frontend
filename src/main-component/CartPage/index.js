@@ -1,6 +1,4 @@
 import React, { Fragment, useEffect, useState } from "react";
-import HeaderTop from "../../components/HeaderTop/HeaderTop";
-import Navbar from "../../components/Navbar/Navbar";
 import NavbarS2 from '../../components/NavbarS2/NavbarS2';
 import PageTitle from "../../components/pagetitle/PageTitle";
 import Scrollbar from "../../components/scrollbar/scrollbar";

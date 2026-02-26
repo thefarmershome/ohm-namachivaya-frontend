@@ -1,0 +1,197 @@
+/* ===================================================
+   PREMIUM NAVBAR — Fixed + Transparent System
+   =================================================== */
+
+/* ---- BASE: Fixed Navbar Wrapper ---- */
+.fixed-navbar {
+  position: relative;
+  width: 100%;
+  z-index: 999;
+  transition: background 0.4s ease, box-shadow 0.4s ease, top 0.4s ease;
+}
+
+/* ---- SCROLLED STATE (all pages): sticky at top with shadow ---- */
+.fixed-navbar.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  animation: slideDown 0.4s ease forwards;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* ---- TRANSPARENT MODE (home page) ---- */
+
+/* Always fixed, overlays hero */
+.fixed-navbar.navbar-transparent {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* Transparent backgrounds */
+.fixed-navbar.navbar-transparent .wpo-header-style-2 .wpo-site-header {
+  background: transparent;
+  border-top: none;
+  transition: background 0.4s ease, border 0.4s ease;
+}
+
+.fixed-navbar.navbar-transparent .wpo-header-style-2 .wpo-site-header .row {
+  background: transparent;
+  transition: background 0.4s ease;
+}
+
+.fixed-navbar.navbar-transparent .wpo-site-header .navigation {
+  background-color: transparent;
+  transition: background-color 0.4s ease;
+}
+
+/* White nav links */
+.fixed-navbar.navbar-transparent #navbar > ul > li > a {
+  color: rgba(255, 255, 255, 0.95);
+  transition: color 0.3s ease;
+}
+
+.fixed-navbar.navbar-transparent #navbar > ul > li > a:hover {
+  color: #b6bf4b;
+}
+
+/* White logo */
+.fixed-navbar.navbar-transparent .navbar-brand img {
+  filter: brightness(0) invert(1);
+  transition: filter 0.4s ease;
+}
+
+/* White profile text */
+.fixed-navbar.navbar-transparent .header-right p {
+  color: rgba(255, 255, 255, 0.95);
+  transition: color 0.3s ease;
+}
+
+/* White profile image */
+.fixed-navbar.navbar-transparent .header-right img[alt="profileImage"] {
+  filter: brightness(1.4) contrast(0.9);
+  transition: filter 0.4s ease;
+}
+
+/* White mobile hamburger bars */
+.fixed-navbar.navbar-transparent .showmenu button span {
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+/* Sub-menus always white bg */
+.fixed-navbar.navbar-transparent .sub-menu {
+  background-color: #fff !important;
+}
+
+.fixed-navbar.navbar-transparent .sub-menu li a {
+  color: #232f4b !important;
+}
+
+.fixed-navbar.navbar-transparent .sub-menu li a:hover {
+  color: #0f6a45 !important;
+}
+
+/* ---- TRANSPARENT + SCROLLED (reverts to white) ---- */
+
+.fixed-navbar.navbar-transparent.active {
+  animation: none;
+  transform: translateY(0);
+}
+
+.fixed-navbar.navbar-transparent.active .wpo-header-style-2 .wpo-site-header {
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+
+.fixed-navbar.navbar-transparent.active .navbar-brand img {
+  filter: brightness(0) saturate(100%) invert(33%) sepia(52%) saturate(900%) hue-rotate(115deg) brightness(92%);
+}
+
+.fixed-navbar.navbar-transparent.active .header-right img[alt="profileImage"] {
+  filter: none;
+}
+
+.fixed-navbar.navbar-transparent.active .showmenu button span {
+  background-color: #232323;
+}
+
+.fixed-navbar.navbar-transparent.active .wpo-header-style-2 .wpo-site-header .row {
+  background: #fff;
+}
+
+.fixed-navbar.navbar-transparent.active .wpo-site-header .navigation {
+  background-color: #fff;
+}
+
+.fixed-navbar.navbar-transparent.active #navbar > ul > li > a {
+  color: #232f4b;
+}
+
+.fixed-navbar.navbar-transparent.active #navbar > ul > li > a:hover {
+  color: #0f6a45;
+}
+
+.fixed-navbar.navbar-transparent.active .header-right p {
+  color: inherit;
+}
+
+/* ---- NON-TRANSPARENT SCROLLED: dark hamburger bars ---- */
+.fixed-navbar.active .showmenu button span {
+  background-color: #232323;
+}
+
+/* ---- GREEN LOGO on white bg navbar ---- */
+.fixed-navbar .navbar-brand img {
+  filter: brightness(0) saturate(100%) invert(33%) sepia(52%) saturate(900%) hue-rotate(115deg) brightness(92%);
+  transition: filter 0.4s ease;
+}
+
+/* ---- NAVBAR SPACER (prevents content jump) ---- */
+.navbar-spacer {
+  width: 100%;
+  transition: height 0.1s ease;
+}
+
+/* ---- DESKTOP: Right-align nav links ---- */
+@media screen and (min-width: 992px) {
+  .wpo-site-header #navbar {
+    justify-content: flex-end !important;
+  }
+}
+
+/* ---- MOBILE LAYOUT: logo left, hamburger right ---- */
+@media (max-width: 991px) {
+  .wpo-header-style-2 .wpo-site-header .header-right {
+    right: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  /* Hide middle nav column on mobile */
+  .wpo-header-style-2 .navigation .row > .col-lg-5 {
+    display: none;
+  }
+
+  /* Logo column: 60% width */
+  .wpo-header-style-2 .navigation .row > .col-lg-3 {
+    flex: 0 0 60%;
+    max-width: 60%;
+  }
+
+  /* Header-right column: 40% width */
+  .wpo-header-style-2 .navigation .row > .col-lg-4 {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+}

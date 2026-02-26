@@ -35,7 +35,7 @@ const HeaderTop = () => {
                                 </div>
                                 <div className="info-text">
                                     <span>E-mail Now:</span>
-                                    <p>thefarmershome123@gmail.com</p>
+                                    <p>info@namachivaya.com</p>
                                 </div>
                             </div>
                             <div className="contact-info">

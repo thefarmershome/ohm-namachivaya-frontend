@@ -10,7 +10,9 @@
 .floating-leaf {
   position: absolute;
   animation: floatLeaf 6s ease-in-out infinite;
-  opacity: 0.9;
+  opacity: 0.85;
+  z-index: 10;
+  pointer-events: none;
 }
 
 @keyframes floatLeaf {

@@ -23,7 +23,7 @@ const HeaderTopS2 = () => {
                                         <i className="fi flaticon-email"></i>
                                     </div>
                                     <div className="info-text">
-                                        <p>thefarmershome123@gmail.com</p>
+                                        <p>info@namachivaya.com</p>
                                     </div>
                                 </div>
                                 <div className="contact-info">

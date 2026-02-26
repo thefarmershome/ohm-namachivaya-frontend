@@ -57,7 +57,7 @@ const CheckWrap = ({amount, cartItem, customerInfo}) => {
             //         key: process.env.REACT_APP_RAZORPAY_KEY_ID,
             //         amount: parsRes.data.data.amount,
             //         currency: parsRes.data.data.currency,
-            //         name: "The Farmer's Home",
+            //         name: "Om Namahsivaya Internationals",
             //         description: "Test Transaction",
             //         order_id: parsRes.data.dataid, // <- REQUIRED!
             //         handler: async (res) => {                    
@@ -78,7 +78,7 @@ const CheckWrap = ({amount, cartItem, customerInfo}) => {
         const paymentData = {
             amount: paymentOrderRes.amount,
             currency: paymentOrderRes.currency,
-            description: 'Payment for your order from The Farmer\'s Home',
+            description: 'Payment for your order from Om Namahsivaya Internationals',
             customerName: customerInfo?.fname + ' ' + customerInfo?.lname || '',
             customerEmail: customerInfo?.email || '',
             customerPhone: customerInfo?.phone || '',
