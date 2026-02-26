@@ -94,7 +94,7 @@ const Contactpage = () => {
     <Box mt={2}>
       <Typography fontWeight="bold" color="#0f6a45">CONTACT</Typography>
       <Typography>+91 93444 59699</Typography>
-      <Typography>contact@thefarmershome.in</Typography>
+      <Typography>info@namachivaya.com</Typography>
     </Box>
 
     <Box mt={2}>

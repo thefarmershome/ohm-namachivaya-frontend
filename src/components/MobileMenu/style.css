@@ -5,14 +5,14 @@
     z-index: 9999;
     height: 100vh;
     width: 300px;
-    background: rgb(48, 150, 218);
+    background: linear-gradient(135deg, #0f6a45, #1c8c5d);
     transition: all 0.3s ease 0s;
     box-shadow: 0px 10px 40px 0px rgba(50, 50, 50, 0.1);
     overflow-x: auto;
     overflow-y: scroll;
 }
 .responsivemenu .card-body{
-    background: #1A1729;
+    background: #0f6a45;
 }
 .mobileMenu h2{
     padding-left: 20px;
@@ -127,6 +127,57 @@
     }
 }
 
+/* Below sm: smaller hamburger icon (320px - 575px) */
+@media (min-width: 440px) and (max-width: 575.98px) {
+    .showmenu {
+        width: 28px;
+        height: 24px;
+        line-height: 28px;
+        margin-top: 20px;
+    }
+    .showmenu button span {
+        width: 14px;
+        height: 1.5px;
+        margin-bottom: 4px;
+    }
+}
+
+/* Extra small screens: smallest hamburger (320px - 440px) – whole green button */
+@media (min-width: 320px) and (max-width: 439.98px) {
+    .showmenu,
+    .mobile-menu-btn .showmenu {
+        width: auto;
+        height: auto;
+        line-height: 1;
+    }
+    /* Shrink the green background button itself */
+    .showmenu button,
+    .mobile-menu-btn .showmenu button,
+    .mobail-menu button {
+        width: 30px !important;
+        height: 30px !important;
+        min-width: 26px !important;
+        min-height: 22px !important;
+        padding: 2px 3px !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .showmenu button span,
+    .mobile-menu-btn .showmenu button span,
+    .mobail-menu button span {
+        width: 15px !important;
+        height: 2px !important;
+        margin-bottom: 3px !important;
+    }
+    .showmenu button span:last-child,
+    .mobail-menu button span:last-child {
+        margin-bottom: 0 !important;
+    }
+}
+
 
 
 .middle-header-3 .showmenu {
@@ -153,7 +204,41 @@
 }
 
 
-.responsivemenu a:not([href]):not([class]), 
+.responsivemenu a:not([href]):not([class]),
 .responsivemenu a:not([href]):not([class]):hover{
  color: #ddd;
+}
+
+/* ---- Mobile Profile Section inside Drawer ---- */
+.mobile-menu-profile {
+    display: flex;
+    align-items: center;
+    padding: 20px 25px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 10px;
+}
+
+.mobile-profile-img {
+    width: 45px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 12px;
+}
+
+.mobile-profile-name {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* ---- Mobile Menu Button in Header Right ---- */
+.mobile-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.mobile-menu-btn .showmenu {
+    display: block;
 }

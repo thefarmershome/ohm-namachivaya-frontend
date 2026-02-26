@@ -3,14 +3,12 @@ import { Link, useParams } from 'react-router-dom'
 import Services from '../../api/Services';
 import ServiceFrom from './ServiceFrom ';
 import ServiceSidebar from './sidebar'
-import HeaderTop from '../../components/HeaderTop/HeaderTop'
-import Navbar from '../../components/Navbar/Navbar'
+import NavbarS2 from '../../components/NavbarS2/NavbarS2'
 import PageTitle from '../../components/pagetitle/PageTitle'
 import Footer from '../../components/footer/Footer';
 import Scrollbar from '../../components/scrollbar/scrollbar'
 import simg1 from '../../images/service-single/3.jpg'
 import simg2 from '../../images/service-single/2.jpg'
-import Logo from '../../images/logo.svg'
 
 const ServiceSinglePage = (props) => {
     const ClickHandler = () => {
@@ -22,8 +20,7 @@ const ServiceSinglePage = (props) => {
 
     return (
         <Fragment>
-            <HeaderTop />
-            <Navbar hclass={'wpo-site-header'} Logo={Logo} />
+            <NavbarS2 hclass={'wpo-header-style-2'} />
             <PageTitle pageTitle={serviceDetails.title} pagesub={'Service Single'} />
             <div className="wpo-service-single-area section-padding">
                 <div className="container">
